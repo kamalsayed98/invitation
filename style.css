@@ -894,3 +894,43 @@ to {
 
 /* Measure the visible name widths so the conjunction sits in their shared gap. */
 .couple-section .person h2 { width: fit-content; max-width: 100%; margin-inline: auto; }
+
+/* A quiet, decorative companion; it never changes the paper's layout. */
+.cat-companion {
+  position: absolute;
+  left: 28px;
+  bottom: 27px;
+  width: 83px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(8px);
+}
+.cat-companion img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform-origin: 50% 95%;
+  filter: saturate(.85);
+}
+.opened:not(.card-expanding) .cat-companion {
+  opacity: 1;
+  transform: none;
+  transition: opacity .8s ease, transform .8s ease;
+}
+.opened:not(.card-expanding) .cat-companion img {
+  animation: catBreathing 6s 1s ease-in-out infinite;
+}
+@keyframes catBreathing {
+  0%, 100% { transform: scale(1) rotate(0); }
+  50% { transform: scale(1.012, 1.018) rotate(.35deg); }
+}
+@media (max-width: 600px) {
+  .cat-companion { left: 18px; bottom: 22px; width: 57px; }
+}
+@media (max-width: 359px) {
+  .cat-companion { left: 15px; bottom: 20px; width: 43px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .opened .cat-companion { opacity: 1; transform: none; }
+}

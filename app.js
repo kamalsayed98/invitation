@@ -52,6 +52,10 @@
   } else {
     imageFallback.hidden = false;
   }
+  const catImage = $('cat-image');
+  catImage.onload = () => { $('cat-companion').hidden = false; };
+  catImage.onerror = () => { $('cat-companion').hidden = true; };
+  if (config.catImage && config.catImage.trim()) catImage.src = config.catImage;
   let countdownTimer;
   function updateCountdown() {
     const remaining = Math.max(0, Math.ceil((eventTime - Date.now()) / 1000));
