@@ -30,22 +30,25 @@
   $('location').href = config.locationUrl;
   $('open').setAttribute('aria-label', `فتح دعوة كتب كتاب ${config.groomName} و${config.brideName}`);
   const coupleImage = $('couple-image');
-  coupleImage.alt = `${config.groomName} و${config.brideName} معًا`;
+  const coupleScene = $('couple-scene');
+  coupleScene.setAttribute('aria-label', `${config.groomName} و${config.brideName} معًا`);
   const imageFallback = $('couple-image-fallback');
   coupleImage.onload = () => {
-    coupleImage.hidden = false;
+    const imageUrl = coupleImage.currentSrc || coupleImage.src;
+    $('scene-base').setAttribute('href', imageUrl);
+    $('scene-girl').setAttribute('href', imageUrl);
+    coupleScene.removeAttribute('hidden');
     imageFallback.hidden = true;
     fitCard();
   };
   coupleImage.onerror = () => {
-    coupleImage.hidden = true;
+    coupleScene.setAttribute('hidden', '');
     imageFallback.hidden = false;
     fitCard();
   };
   if (config.coupleImage && config.coupleImage.trim()) {
     coupleImage.src = config.coupleImage;
   } else {
-    coupleImage.hidden = true;
     imageFallback.hidden = false;
   }
   let countdownTimer;
