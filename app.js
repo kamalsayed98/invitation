@@ -25,6 +25,7 @@
   $('event-time').textContent = config.event.hour === 18 && config.event.minute === 0 ? 'الساعة السادسة مساءً' : 'الساعة ' + new Intl.DateTimeFormat('ar-LB-u-nu-arab', { timeZone: config.event.timeZone, hour: 'numeric', minute: '2-digit', hour12: true }).format(date);
   $('groom-name').textContent = config.groomName;
   $('bride-name').textContent = config.brideName;
+  $('signature').textContent = `بِحُبٍّ، ${config.groomName.split(' ')[0]} و${config.brideName.split(' ')[0]}`;
   document.title = `${config.groomName} و${config.brideName} | دعوة كتب كتاب`;
   $('location').href = config.locationUrl;
   $('open').setAttribute('aria-label', `فتح دعوة كتب كتاب ${config.groomName} و${config.brideName}`);
