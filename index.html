@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f1e9">
+  <meta name="description" content="بكل الحب، ندعوكم لمشاركتنا فرحة كتب كتاب كمال ويسرى">
+  <title>كمال ويسرى | دعوة كتب كتاب</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"><script src="config.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="svg-library" aria-hidden="true"><defs>
+    <filter id="paper"><feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+    <symbol id="branch" viewBox="0 0 240 400"><g fill="none" stroke="currentColor" stroke-width="1.15"><path d="M110 395C91 294 119 179 190 22M109 339Q55 305 32 241M111 296Q162 272 189 218M122 239Q74 211 67 159M139 188Q185 169 210 121M160 132Q130 104 136 61"/></g><g fill="currentColor" opacity=".32"><ellipse cx="47" cy="270" rx="10" ry="30" transform="rotate(-35 47 270)"/><ellipse cx="76" cy="307" rx="9" ry="27" transform="rotate(-50 76 307)"/><ellipse cx="161" cy="257" rx="9" ry="29" transform="rotate(41 161 257)"/><ellipse cx="183" cy="223" rx="8" ry="25" transform="rotate(30 183 223)"/><ellipse cx="81" cy="195" rx="10" ry="28" transform="rotate(-25 81 195)"/><ellipse cx="105" cy="224" rx="8" ry="24" transform="rotate(-45 105 224)"/><ellipse cx="182" cy="163" rx="9" ry="28" transform="rotate(48 182 163)"/><ellipse cx="205" cy="128" rx="8" ry="24" transform="rotate(30 205 128)"/><ellipse cx="138" cy="85" rx="8" ry="27" transform="rotate(-8 138 85)"/><ellipse cx="169" cy="72" rx="8" ry="24" transform="rotate(30 169 72)"/><ellipse cx="188" cy="28" rx="7" ry="24" transform="rotate(24 188 28)"/></g></symbol>
+    <symbol id="heart" viewBox="0 0 24 24"><path d="M20.7 4.7a5.5 5.5 0 0 0-7.8 0l-.9.9-.9-.9a5.5 5.5 0 0 0-7.8 7.8L12 21l8.7-8.5a5.5 5.5 0 0 0 0-7.8Z" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+  </defs></svg>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="botanical botanical-top" aria-hidden="true"><svg><use href="#branch"/></svg></div>
+  <div class="botanical botanical-bottom" aria-hidden="true"><svg><use href="#branch"/></svg></div>
+  <main>
+    <section class="opening" aria-label="فتح دعوة كتب الكتاب">
+      <div class="intro"><p class="eyebrow">دَعْوَةٌ مِنَ القَلْب</p><h1>بكل الحب، ندعوكم<br>لمشاركتنا فرحتنا</h1><div class="small-ornament" aria-hidden="true">✧</div></div>
+      <div class="envelope-stage">
+        <div class="lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="envelope" aria-hidden="true">
+          <span class="envelope-back"></span>
+          <div class="paper-pocket" inert></div>
+          <span class="envelope-front"></span><span class="envelope-fold"></span>
+          <span class="flap"></span><span class="seal"><svg><use href="#heart"/></svg></span>
+          <span class="envelope-inscription" aria-hidden="true">إلى مَن تكتملُ فرحتنا بهم</span>
+        </div>
+        <button class="envelope-trigger" id="open" aria-label="فتح دعوة كتب كتاب كمال ويسرى" aria-expanded="false" aria-controls="invitation"></button>
+        <div class="envelope-shadow" aria-hidden="true"></div>
+      </div>
+      <div class="opening-caption"><p>اضغط على الظرف لفتح الدعوة</p><span>رسالة صغيرة، لفرحة كبيرة</span></div>
+      <p class="opening-date" id="cover-date"></p>
+    </section>
+    <section class="invitation-wrap" id="invitation" hidden>
+      <article class="invitation" tabindex="-1" aria-label="رسالة دعوة كتب الكتاب">
+        <div class="card-branch card-branch-right" aria-hidden="true"><svg><use href="#branch"/></svg></div>
+        <div class="card-branch card-branch-left" aria-hidden="true"><svg><use href="#branch"/></svg></div>
+        <div class="card-content">
+          <p class="bismillah reveal">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+          <div class="verse reveal"><p>﴿وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً﴾</p><small>سورة الروم — من الآية ٢١</small></div>
+          <p class="invitation-copy reveal">نتشرّف بدعوتكم<br>لحضور كتب كتابنا</p>
+          <div class="couple-section reveal">
+            <div class="couple-art">
+              <img id="couple-image" width="729" height="342" alt="كمال ويسرى معًا" decoding="async">
+              <span id="couple-image-fallback" hidden>صورة العروسين</span>
+            </div>
+            <div class="couple">
+              <div class="person"><h2 id="groom-name"></h2></div>
+              <span class="ampersand" aria-label="و">و</span>
+              <div class="person"><h2 id="bride-name"></h2></div>
+            </div>
+          </div>
+          <div class="event-details reveal"><p id="event-date"></p><p id="event-time"></p></div>
+          <div class="countdown-section reveal" id="countdown-section"><p>كل لحظة تُقرّبنا من فرحتنا</p><div class="countdown" role="timer" aria-label="الوقت المتبقي للحفل"><div><b id="days">٠٠</b><span>أيام</span></div><i>:</i><div><b id="hours">٠٠</b><span>ساعات</span></div><i>:</i><div><b id="minutes">٠٠</b><span>دقائق</span></div><i>:</i><div><b id="seconds">٠٠</b><span>ثوانٍ</span></div></div></div>
+          <div class="closing reveal"><a id="location" class="location" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>موقع الحفل<span aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
+      <button id="replay" class="replay"><span aria-hidden="true">↻</span> إعادة فتح الدعوة</button>
+    </section>
+  </main>
+  <footer>بِحُبٍّ، كمال ويسرى <span aria-hidden="true">♡</span></footer>
+  <p class="sr-only" role="status" id="status"></p>
+  <noscript><p class="no-script">يرجى تفعيل جافاسكريبت لفتح رسالة الدعوة.</p></noscript>
+</body></html>
