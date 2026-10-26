@@ -70,7 +70,7 @@ main {
   position:relative;
   z-index:1}
 .opening {
-  min-height:calc(100svh - 65px);
+  min-height:100svh;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -550,7 +550,7 @@ to {
 @media(max-width:600px) {
 
 .opening {
-  min-height:calc(100svh - 65px);
+  min-height:100svh;
   padding-top:20px}
 .envelope-stage {
   height:260px;

@@ -28,7 +28,6 @@
   document.title = `${config.groomName} و${config.brideName} | دعوة كتب كتاب`;
   $('location').href = config.locationUrl;
   $('open').setAttribute('aria-label', `فتح دعوة كتب كتاب ${config.groomName} و${config.brideName}`);
-  document.querySelector('footer').firstChild.textContent = `بِحُبٍّ، ${config.groomName.split(' ')[0]} و${config.brideName.split(' ')[0]} `;
   const coupleImage = $('couple-image');
   coupleImage.alt = `${config.groomName} و${config.brideName} معًا`;
   const imageFallback = $('couple-image-fallback');

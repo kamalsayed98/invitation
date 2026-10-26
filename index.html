@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f1e9">
-  <meta name="description" content="بكل الحب، ندعوكم لمشاركتنا فرحة كتب كتاب كمال ويسرى">
+  <meta name="description" content="ندعوكم لمشاركتنا فرحة كتب كتاب كمال ويسرى">
   <title>كمال ويسرى | دعوة كتب كتاب</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
   <div class="botanical botanical-bottom" aria-hidden="true"><svg><use href="#branch"/></svg></div>
   <main>
     <section class="opening" aria-label="فتح دعوة كتب الكتاب">
-      <div class="intro"><p class="eyebrow">دَعْوَةٌ مِنَ القَلْب</p><h1>بكل الحب، ندعوكم<br>لمشاركتنا فرحتنا</h1><div class="small-ornament" aria-hidden="true">✧</div></div>
+      <div class="intro"><h1>ندعوكم<br>لمشاركتنا فرحتنا</h1><div class="small-ornament" aria-hidden="true">✧</div></div>
       <div class="envelope-stage">
         <div class="lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
         <div class="envelope" aria-hidden="true">
@@ -28,12 +28,11 @@
           <div class="paper-pocket" inert></div>
           <span class="envelope-front"></span><span class="envelope-fold"></span>
           <span class="flap"></span><span class="seal"><svg><use href="#heart"/></svg></span>
-          <span class="envelope-inscription" aria-hidden="true">إلى مَن تكتملُ فرحتنا بهم</span>
         </div>
         <button class="envelope-trigger" id="open" aria-label="فتح دعوة كتب كتاب كمال ويسرى" aria-expanded="false" aria-controls="invitation"></button>
         <div class="envelope-shadow" aria-hidden="true"></div>
       </div>
-      <div class="opening-caption"><p>اضغط على الظرف لفتح الدعوة</p><span>رسالة صغيرة، لفرحة كبيرة</span></div>
+      <div class="opening-caption"><p>اضغط على الظرف لفتح الدعوة</p></div>
       <p class="opening-date" id="cover-date"></p>
     </section>
     <section class="invitation-wrap" id="invitation" hidden>
@@ -46,7 +45,7 @@
           <p class="invitation-copy reveal">نتشرّف بدعوتكم<br>لحضور كتب كتابنا</p>
           <div class="couple-section reveal">
             <div class="couple-art">
-              <img id="couple-image" width="729" height="342" alt="كمال ويسرى معًا" decoding="async">
+              <img id="couple-image" width="729" height="342" alt="كمال ويسرى معًا" decoding="async" fetchpriority="high">
               <span id="couple-image-fallback" hidden>صورة العروسين</span>
             </div>
             <div class="couple">
@@ -56,14 +55,13 @@
             </div>
           </div>
           <div class="event-details reveal"><p id="event-date"></p><p id="event-time"></p></div>
-          <div class="countdown-section reveal" id="countdown-section"><p>كل لحظة تُقرّبنا من فرحتنا</p><div class="countdown" role="timer" aria-label="الوقت المتبقي للحفل"><div><b id="days">٠٠</b><span>أيام</span></div><i>:</i><div><b id="hours">٠٠</b><span>ساعات</span></div><i>:</i><div><b id="minutes">٠٠</b><span>دقائق</span></div><i>:</i><div><b id="seconds">٠٠</b><span>ثوانٍ</span></div></div></div>
+          <div class="countdown-section reveal" id="countdown-section"><div class="countdown" role="timer" aria-label="الوقت المتبقي للحفل"><div><b id="days">٠٠</b><span>أيام</span></div><i>:</i><div><b id="hours">٠٠</b><span>ساعات</span></div><i>:</i><div><b id="minutes">٠٠</b><span>دقائق</span></div><i>:</i><div><b id="seconds">٠٠</b><span>ثوانٍ</span></div></div></div>
           <div class="closing reveal"><a id="location" class="location" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>موقع الحفل<span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
       <button id="replay" class="replay"><span aria-hidden="true">↻</span> إعادة فتح الدعوة</button>
     </section>
   </main>
-  <footer>بِحُبٍّ، كمال ويسرى <span aria-hidden="true">♡</span></footer>
   <p class="sr-only" role="status" id="status"></p>
   <noscript><p class="no-script">يرجى تفعيل جافاسكريبت لفتح رسالة الدعوة.</p></noscript>
 </body></html>
