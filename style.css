@@ -900,7 +900,7 @@ to {
   position: absolute;
   left: 28px;
   bottom: 27px;
-  width: 83px;
+  width: 58.1px;
   pointer-events: none;
   z-index: 2;
   opacity: 0;
@@ -926,10 +926,10 @@ to {
   50% { transform: scale(1.012, 1.018) rotate(.35deg); }
 }
 @media (max-width: 600px) {
-  .cat-companion { left: 18px; bottom: 22px; width: 57px; }
+  .cat-companion { left: 18px; bottom: 22px; width: 39.9px; }
 }
 @media (max-width: 359px) {
-  .cat-companion { left: 15px; bottom: 20px; width: 43px; }
+  .cat-companion { left: 15px; bottom: 20px; width: 30.1px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .opened .cat-companion { opacity: 1; transform: none; }
