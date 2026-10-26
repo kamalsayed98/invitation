@@ -832,6 +832,7 @@ to {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transform: scaleX(-1);
 }
 #couple-image-fallback { font-size: 13px; color: var(--muted); }
 .event-details { display: block; }
