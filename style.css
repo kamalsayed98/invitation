@@ -873,3 +873,24 @@ to {
 /* Preserve the original flowers and connecting heart; orient only her photo. */
 .couple-art { position: relative; }
 #couple-scene { display: block; width: 100%; height: 100%; overflow: visible; }
+
+/* The artwork and name row share one centered alignment grid. */
+.couple-section { width: min(100%, 440px); margin-inline: auto; }
+.couple-art { width: 100%; aspect-ratio: 829 / 342; }
+.couple-section .couple {
+  position: relative;
+  width: 80%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+}
+.couple-section .ampersand {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Measure the visible name widths so the conjunction sits in their shared gap. */
+.couple-section .person h2 { width: fit-content; max-width: 100%; margin-inline: auto; }

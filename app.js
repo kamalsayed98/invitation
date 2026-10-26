@@ -36,6 +36,7 @@
   coupleImage.onload = () => {
     const imageUrl = coupleImage.currentSrc || coupleImage.src;
     $('scene-base').setAttribute('href', imageUrl);
+    $('scene-left-decorations').setAttribute('href', imageUrl);
     $('scene-girl').setAttribute('href', imageUrl);
     coupleScene.removeAttribute('hidden');
     imageFallback.hidden = true;
@@ -74,6 +75,17 @@
   let sparkleTimer;
   let expansion;
 
+  function centerNameConjunction() {
+    const row = card.querySelector('.couple');
+    const rowBounds = row.getBoundingClientRect();
+    if (!rowBounds.width || !row.clientWidth) return;
+    const groomBounds = $('groom-name').getBoundingClientRect();
+    const brideBounds = $('bride-name').getBoundingClientRect();
+    const scale = rowBounds.width / row.clientWidth;
+    const gapCenter = (brideBounds.right + groomBounds.left) / 2;
+    row.querySelector('.ampersand').style.left = `${(gapCenter - rowBounds.left) / scale}px`;
+  }
+
   // Fit the complete invitation into the paper, without an inner scroll area.
   function fitCard() {
     if (invitation.hidden || card.parentElement !== invitation) return;
@@ -87,12 +99,14 @@
       cardContent.style.height = `${needed}px`;
       cardContent.style.transform = `scale(${scale})`;
     }
+    centerNameConjunction();
   }
   window.addEventListener('resize', fitCard);
   if (document.fonts) document.fonts.ready.then(fitCard);
 
   function finishOpening() {
     expansion = null;
+    centerNameConjunction();
     document.body.classList.remove('opening-in-progress', 'card-expanding');
     card.classList.add('celebrate');
     card.focus({ preventScroll: true });

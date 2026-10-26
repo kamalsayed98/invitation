@@ -46,19 +46,37 @@
           <div class="couple-section reveal">
             <div class="couple-art">
               <img id="couple-image" width="729" height="342" alt="" hidden decoding="async" fetchpriority="high">
-              <svg id="couple-scene" viewBox="0 0 729 342" role="img" aria-label="كمال ويسرى معًا" hidden>
+              <svg id="couple-scene" viewBox="-58.25 0 829 342" role="img" aria-label="كمال ويسرى معًا" hidden>
                 <defs>
                   <polygon id="girl-cutout" points="464,25 445,27 432,35 423,48 422,64 415,80 412,104 407,125 410,142 402,164 395,186 390,212 385,241 380,277 380,308 387,323 418,330 465,334 514,336 557,334 579,326 588,309 592,284 594,258 591,238 585,216 576,197 564,177 557,161 554,145 565,129 576,108 578,89 574,70 560,56 540,47 520,39 500,28 482,25"/>
                   <clipPath id="girl-photo-clip"><use href="#girl-cutout"/></clipPath>
                   <mask id="decorations-and-boy" maskUnits="userSpaceOnUse" x="0" y="0" width="729" height="342">
                     <rect width="729" height="342" fill="white"/>
+                    <rect x="318" y="98" width="102" height="73" fill="black"/>
                     <use href="#girl-cutout" fill="black" stroke="black" stroke-width="5" stroke-linejoin="round"/>
                   </mask>
+                  <clipPath id="left-photo-group"><rect x="-100" y="0" width="456.25" height="342"/></clipPath>
+                  <clipPath id="right-photo-group"><rect x="356.25" y="0" width="500" height="342"/></clipPath>
                 </defs>
-                <g transform="translate(729 0) scale(-1 1)">
-                  <image id="scene-base" width="729" height="342" mask="url(#decorations-and-boy)"/>
+                <g class="love-string" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M258 146 C290 167 325 163 356 145 C342 134 337 117 346 113 C352 110 357 119 358 124 C362 111 371 108 376 115 C386 130 363 147 356 151 C389 160 430 138 462 128" stroke="#eee4d8" stroke-width="5"/>
+                  <path d="M258 146 C290 167 325 163 356 145 C342 134 337 117 346 113 C352 110 357 119 358 124 C362 111 371 108 376 115 C386 130 363 147 356 151 C389 160 430 138 462 128" stroke="#9f8871" stroke-width="3"/>
                 </g>
-                <g transform="translate(-245 0)">
+                <g transform="translate(-50 0)">
+                  <g clip-path="url(#left-photo-group)">
+                    <g transform="translate(729 0) scale(-1 1)">
+                      <image id="scene-left-decorations" width="729" height="342" mask="url(#decorations-and-boy)"/>
+                    </g>
+                  </g>
+                </g>
+                <g transform="translate(50 0)">
+                  <g clip-path="url(#right-photo-group)">
+                    <g transform="translate(729 0) scale(-1 1)">
+                      <image id="scene-base" width="729" height="342" mask="url(#decorations-and-boy)"/>
+                    </g>
+                  </g>
+                </g>
+                <g transform="translate(-295 0)">
                   <image id="scene-girl" width="729" height="342" clip-path="url(#girl-photo-clip)"/>
                 </g>
               </svg>
