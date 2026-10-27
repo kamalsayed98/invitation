@@ -19,7 +19,8 @@ body {
   font-size:18px;
   line-height:1.8;
   min-width:280px;
-  background:radial-gradient(ellipse at 50% 38%,#fffdf8b0,transparent 65%)}
+  background-color:var(--ivory);
+  background-image:radial-gradient(ellipse at 50% 38%,#fffdf8b0,transparent 65%)}
 button,a {
   -webkit-tap-highlight-color:transparent}
 button {
