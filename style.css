@@ -838,6 +838,8 @@ to {
 }
 #couple-image-fallback { font-size: 13px; color: var(--muted); }
 .event-details { display: block; }
+.event-details .event-note { font-size: 12px; line-height: 1.4; margin: 2px 0 0; }
+.closing .venue-address { margin-bottom: 8px; }
 .closing .location {
   display: inline-flex;
   padding: 7px 18px;
