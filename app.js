@@ -22,7 +22,7 @@
   const fullDate = config.event.year === 2026 && config.event.month === 10 && config.event.day === 31 ? 'السبت، ٣١ أكتوبر ٢٠٢٦' : dateLabel;
   $('event-date').textContent = fullDate;
   $('cover-date').textContent = fullDate;
-  $('event-time').textContent = config.event.hour === 17 && config.event.minute === 0 ? 'الساعة الخامسة مساءً' : 'الساعة ' + new Intl.DateTimeFormat('ar-LB-u-nu-arab', { timeZone: config.event.timeZone, hour: 'numeric', minute: '2-digit', hour12: true }).format(date);
+  $('event-time').textContent = config.event.hour === 19 && config.event.minute === 0 ? 'الساعة السابعة مساءً' : 'الساعة ' + new Intl.DateTimeFormat('ar-LB-u-nu-arab', { timeZone: config.event.timeZone, hour: 'numeric', minute: '2-digit', hour12: true }).format(date);
   $('groom-name').textContent = config.groomName;
   $('bride-name').textContent = config.brideName;
   $('signature').textContent = `بِحُبٍّ، ${config.groomName.split(' ')[0]} و${config.brideName.split(' ')[0]}`;
