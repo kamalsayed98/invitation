@@ -51,11 +51,13 @@
                 <defs>
                   <polygon id="girl-cutout" points="464,25 445,27 432,35 423,48 422,64 415,80 412,104 407,125 410,142 402,164 395,186 390,212 385,241 380,277 380,308 387,323 418,330 465,334 514,336 557,334 579,326 588,309 592,284 594,258 591,238 585,216 576,197 564,177 557,161 554,145 565,129 576,108 578,89 574,70 560,56 540,47 520,39 500,28 482,25"/>
                   <clipPath id="girl-photo-clip"><use href="#girl-cutout"/></clipPath>
-                  <mask id="decorations-and-boy" maskUnits="userSpaceOnUse" x="0" y="0" width="729" height="342">
-                    <rect width="729" height="342" fill="white"/>
-                    <rect x="318" y="98" width="102" height="73" fill="black"/>
-                    <use href="#girl-cutout" fill="black" stroke="black" stroke-width="5" stroke-linejoin="round"/>
-                  </mask>
+                  <!-- Geometry-only crops stay unchanged when browsers recolor dark-mode content. -->
+                  <clipPath id="decorations-and-boy">
+                    <path clip-rule="evenodd" d="M0 0H729V342H0Z M464,25 L445,27 L432,35 L423,48 L422,64 L415,80 L412,104 L407,125 L410,142 L402,164 L395,186 L390,212 L385,241 L380,277 L380,308 L387,323 L418,330 L465,334 L514,336 L557,334 L579,326 L588,309 L592,284 L594,258 L591,238 L585,216 L576,197 L564,177 L557,161 L554,145 L565,129 L576,108 L578,89 L574,70 L560,56 L540,47 L520,39 L500,28 L482,25Z"/>
+                  </clipPath>
+                  <clipPath id="without-original-heart">
+                    <path clip-rule="evenodd" d="M0 0H729V342H0Z M318 98H420V171H318Z"/>
+                  </clipPath>
                   <clipPath id="left-photo-group"><rect x="-100" y="0" width="456.25" height="342"/></clipPath>
                   <clipPath id="right-photo-group"><rect x="356.25" y="0" width="500" height="342"/></clipPath>
                 </defs>
@@ -66,14 +68,14 @@
                 <g transform="translate(-50 0)">
                   <g clip-path="url(#left-photo-group)">
                     <g transform="translate(729 0) scale(-1 1)">
-                      <image id="scene-left-decorations" width="729" height="342" mask="url(#decorations-and-boy)"/>
+                      <g clip-path="url(#without-original-heart)"><image id="scene-left-decorations" width="729" height="342" clip-path="url(#decorations-and-boy)"/></g>
                     </g>
                   </g>
                 </g>
                 <g transform="translate(50 0)">
                   <g clip-path="url(#right-photo-group)">
                     <g transform="translate(729 0) scale(-1 1)">
-                      <image id="scene-base" width="729" height="342" mask="url(#decorations-and-boy)"/>
+                      <g clip-path="url(#without-original-heart)"><image id="scene-base" width="729" height="342" clip-path="url(#decorations-and-boy)"/></g>
                     </g>
                   </g>
                 </g>
